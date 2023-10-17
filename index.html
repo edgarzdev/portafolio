@@ -23,37 +23,95 @@
 
         <main>
             <h1 class="presentation-title">
-                <span class="up">Hola!</span>
-                <span class="down">soy Edgar ramirez</span>
+                <span class="up">¡Hola!</span>
+                <span class="down">Soy Edgar ramirez</span>
             </h1>
-            <section>
+            <p class="desc">Desarrollador de Software</p>
+            <section id="sobre_mi">
                 <h2>Sobre mí</h2>
                 <br>
                 <div class="info-container">
-                    <img src="edgar-ramirez.jpg" alt="Mi Foto" class="profile-image">
-                    <p>Hola, soy <strong>Abimael Edgar Ramirez Lopez </strong>, un Técnico Superior en Análisis de
-                        Sistemas con 2 años de
-                        experiencia en soporte
-                        técnico y desarrollo de software. Actualmente, estoy estudiando Ingeniería de Sistemas para
-                        ampliar
-                        mis
-                        conocimientos en el campo. Mi objetivo es crecer en el mundo del desarrollo de software y
-                        ofrecer
-                        soluciones tecnológicas de calidad.</p>
+                    <img src="assets/images/edgar-ramirez.jpg" alt="Mi Foto" class="profile-image">
+                    <div>
+                        <p>Hola, soy <strong>Abimael Edgar Ramirez Lopez </strong>, un Técnico Superior en Análisis de
+                            Sistemas con 2 años de
+                            experiencia en soporte
+                            técnico y desarrollo de software. Actualmente, estoy estudiando Ingeniería de Sistemas para
+                            ampliar
+                            mis
+                            conocimientos en el campo. Mi objetivo es crecer en el mundo del desarrollo de software y
+                            ofrecer
+                            soluciones tecnológicas de calidad.
+                        </p>
+                        <button class="btn"> Descargar CV</button>
+                        <br>
+                        <br>
+                        <div class="skills">
+                            <i class="csharp" title="C#"></i>
+                            <i class="php" title="PHP"></i>
+                            <i class="javascript" title="JavaScript"></i>
+                            <i class="html5" title="HTML"></i>
+                            <i class="css3" title="CSS"></i>
+                            <i class="react" title="React"></i>
+                            <i class="mysql" title="MySQL"></i>
+                            <i class="mongodb" title="MongoDB"></i>
+                            <i class="postgresql" title="PostgreSQL"></i>
+                            <i class="git" title="Git"></i>
+                            <i class="github" title="GitHub"></i>
+                            <i class="vscode" title="Visual Studio Code"></i>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section id="proyectos">
                 <h2>Proyectos</h2>
                 <br>
-                <div>
-
+                <div class="proy-list">
+                    <div class="proy">
+                        <div class="p_desc">
+                            <h3>Modelado de base de datos para el club deportivo "Tres A"</h3>
+                            <p><i>2023 | Oruro - Bolivia</i></p>
+                            <p>Se ha desarrollado una base de datos integral para el Club Deportivo TresA, desde el diseño
+                                conceptual hasta la implementación física. Esta base de datos cumple con todos los
+                                requisitos específicos del club, permitiendo una gestión eficiente de socios,
+                                competiciones y entrenamientos, lo que mejora la toma de decisiones y la experiencia de
+                                los miembros del club.</p>
+                        </div>
+                        <div class="p_image">
+                            <img src="assets/images/bg.jpg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="proy">
+                        <div class="p_desc">
+                            <h3>Desarrollo de sistema web para "FACULTAD DCPS UTO"</h3>
+                            <p><i>2022 | Oruro - Bolivia</i></p>
+                            <p>Desarrollo de un sistema web para la gestión de reservas del 
+                                Polifuncional Centenario de Derecho, éste coadyuva a la 
+                                administración y a las Autoridades de la institución a tomar decisiones.</p>
+                        </div>
+                        <div class="p_image">
+                            <img src="assets/images/bg.jpg" alt="" srcset="">
+                        </div>
+                    </div>
                 </div>
             </section>
             <section id="contactos">
                 <h2>Contactame</h2>
                 <br>
                 <div>
-
+                    <h3>Envíanos un mensaje</h3>
+                    <form action="#" method="post">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+        
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        
+                        <button type="submit">Enviar</button>
+                    </form>
                 </div>
             </section>
         </main>
