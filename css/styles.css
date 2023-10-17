@@ -68,10 +68,6 @@ main {
 
 }
 
-section {
-    padding: 20px;
-}
-
 section:nth-child(even) {
    /* background: linear-gradient(#0d1117, #232931, #0d1117);*/
 }
