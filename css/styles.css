@@ -19,10 +19,14 @@ body {
 }
 
 .btn {
+    text-decoration: none;
+    color: #000000;
     border: none;
     padding: 6px 12px;
     border-radius: 15px;
     font-size: small;
+
+    background-color: #ccc;
 }
 
 .container {
