@@ -1,125 +1,665 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Portafolio Ramirez</title>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <nav class="nav">
-                <div class="nav-logo">
-                    <a href=".">Mi portafolio</a>
-                </div>
-                <div class="nav-menu">
-                    <a href="#sobre_mi">Sobre mi</a>
-                    <a href="#proyectos">Mis Proyectos</a>
-                    <a href="#contactos">Contactos</a>
-                </div>
-            </nav>
-        </header>
+    <meta name="description"
+        content="Portafolio profesional de Ingeniería de Sistemas - Desarrollo de software, soporte técnico y capacitación">
+    <meta name="keywords" content="Ingeniería de Sistemas, Desarrollo Web, PHP, MySQL, JavaScript, Soporte Técnico">
+    <meta name="author" content="Edgar Ramirez">
+    <title>Edgar Ramirez | Ingeniero de Sistemas & Desarrollador Web</title>
 
-        <main>
-            <h1 class="presentation-title">
-                <span class="up">¡Hola!</span>
-                <span class="down">Soy Edgar Ramirez</span>
-            </h1>
-            <p class="desc">Desarrollador de Software</p>
-            <section id="sobre_mi">
-                <h2>Sobre mí</h2>
-                <br>
-                <div class="info-container">
-                    <img src="assets/images/edgar-ramirez.jpg" alt="Mi Foto" class="profile-image">
-                    <div>
-                        <p>Hola, soy <strong>Abimael Edgar Ramirez Lopez </strong>, un Técnico Superior en Análisis de
-                            Sistemas con 2 años de
-                            experiencia en soporte
-                            técnico y desarrollo de software. Actualmente, estoy estudiando Ingeniería de Sistemas para
-                            ampliar
-                            mis
-                            conocimientos en el campo. Mi objetivo es crecer en el mundo del desarrollo de software y
-                            ofrecer
-                            soluciones tecnológicas de calidad.
-                        </p>
-                        <a href="assets/docs/CV_Ramirez.pdf" class="btn"> Descargar CV</a>
-                        <br>
-                        <br>
-                        <div class="skills">
-                            <i class="csharp" title="C#"></i>
-                            <i class="php" title="PHP"></i>
-                            <i class="javascript" title="JavaScript"></i>
-                            <i class="html5" title="HTML"></i>
-                            <i class="css3" title="CSS"></i>
-                            <i class="react" title="React"></i>
-                            <i class="mysql" title="MySQL"></i>
-                            <i class="mongodb" title="MongoDB"></i>
-                            <i class="postgresql" title="PostgreSQL"></i>
-                            <i class="git" title="Git"></i>
-                            <i class="github" title="GitHub"></i>
-                            <i class="vscode" title="Visual Studio Code"></i>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="proyectos">
-                <h2>Proyectos</h2>
-                <br>
-                <div class="proy-list">
-                    <div class="proy">
-                        <div class="p_desc">
-                            <h3>Modelado de base de datos para el club deportivo "Tres A"</h3>
-                            <p><i>2023 | Oruro - Bolivia</i></p>
-                            <p>Se ha desarrollado una base de datos integral para el Club Deportivo TresA, desde el diseño
-                                conceptual hasta la implementación física. Esta base de datos cumple con todos los
-                                requisitos específicos del club, permitiendo una gestión eficiente de socios,
-                                competiciones y entrenamientos, lo que mejora la toma de decisiones y la experiencia de
-                                los miembros del club.</p>
-                        </div>
-                        <div class="p_image">
-                            <img src="assets/images/bg.jpg" alt="" srcset="">
-                        </div>
-                    </div>
-                    <div class="proy">
-                        <div class="p_desc">
-                            <h3>Desarrollo de sistema web para "FACULTAD DCPS UTO"</h3>
-                            <p><i>2022 | Oruro - Bolivia</i></p>
-                            <p>Desarrollo de un sistema web para la gestión de reservas del 
-                                Polifuncional Centenario de Derecho, éste coadyuva a la 
-                                administración y a las Autoridades de la institución a tomar decisiones.</p>
-                        </div>
-                        <div class="p_image">
-                            <img src="assets/images/bg.jpg" alt="" srcset="">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="contactos">
-                <h2>Contáctame</h2>
-                <br>
-                <div>
-                    <h3>Envíanos un mensaje</h3>
-                    <form action="#" method="post">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required>
-        
-                        <label for="email">Correo Electrónico:</label>
-                        <input type="email" id="email" name="email" required>
-        
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-        
-                        <button type="submit">Enviar</button>
-                    </form>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <div class="footer-in">
-                <p>Realizado por Edgar Ramirez - &copy; Derechos reservados</p>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- ============================================ -->
+    <!-- NAVBAR FIJO - Navegación principal           -->
+    <!-- ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>ER<span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link active">Inicio</a></li>
+                <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+                <li><a href="#summary" class="nav-link">Resumen</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#cv" class="nav-link">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION - Portada principal             -->
+    <!-- ============================================ -->
+    <section class="hero" id="hero">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Disponible para nuevas oportunidades
             </div>
-        </footer>
-    </div>
+            <h1 class="hero-title">
+                <span class="title-greeting">Hola, soy</span>
+                <span class="title-name">Edgar Ramirez Lopez</span>
+            </h1>
+            <div class="hero-typing">
+                <span id="typing-text"></span>
+                <span class="typing-cursor">|</span>
+            </div>
+            <p class="hero-description">
+                Técnico Superior en Análisis de Sistemas y estudiante de Ingeniería de Sistemas.
+                Especializado en desarrollo web full-stack, soporte técnico avanzado y
+                capacitación tecnológica con resultados medibles.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-suffix">%</span>
+                    <span class="stat-label">Optimización de procesos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="40">0</span>
+                    <span class="stat-suffix">%</span>
+                    <span class="stat-label">Reducción de fallos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Años de experiencia</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> Ver Proyectos
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Contáctame
+                </a>
+                <a href="#cv" class="btn btn-outline">
+                    <i class="fas fa-file-alt"></i> Ver CV
+                </a>
+            </div>
+            <div class="hero-social">
+                <a href="https://github.com/edgarzdev" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/edgar-ramirez-lopez" target="_blank" rel="noopener"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:contacto.ramirezedgar@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/1234567890" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SOBRE MÍ - Autobiografía profesional         -->
+    <!-- ============================================ -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">01. Sobre Mí</span>
+                <h2 class="section-title">Autobiografía Profesional</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <div class="about-image">
+                        <!-- Reemplaza con tu foto: src="assets/images/profile.jpg" -->
+                        <img src="images/foto-personal.png" alt="Foto profesional" loading="lazy">
+                        <div class="image-frame"></div>
+                    </div>
+                    <div class="about-experience-badge">
+                        <span class="badge-number">3+</span>
+                        <span class="badge-text">Años de<br>experiencia</span>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-lead">
+                            Mi fascinación por la tecnología comenzó desde temprana edad, desmontando equipos
+                            electrónicos para entender su funcionamiento interno. Esa curiosidad innata me
+                            llevó a formalizar mis estudios como <strong>Técnico Superior en Sistemas
+                                informáticos</strong>
+                            y actualmente me encuentro finalizando mi carrera de <strong>Ingeniería de
+                                Sistemas</strong>.
+                        </p>
+                        <p>
+                            A lo largo de mi trayectoria profesional, he desarrollado una versatilidad que me
+                            permite transitar entre el <strong>desarrollo de software</strong>, el <strong>soporte
+                                técnico </strong> y la <strong>capacitación tecnológica</strong>. Con el desarrollo de
+                            soluciones informáticas y la optimización
+                            de procesos se logró <span class="highlight"> una reducción del 50% en tiempos de procesos
+                                administrativos</span>
+                            y una <span class="highlight">disminución en costos de material de escritorio</span>
+                        </p>
+                        <p>
+                            Como facilitador, he formado a más de <strong>50 técnicos</strong>
+                            en el manejo de herramientas de ofimática avanzada y diseño gráfico, logrando una tasa de
+                            satisfacción del 95% en las evaluaciones post-capacitación. Mi enfoque pedagógico se basa en
+                            la aplicación práctica inmediata y la resolución de problemas reales.
+                        </p>
+                        <p>
+                            Mi objetivo profesional es integrarme a un equipo donde pueda aportar
+                            mis conocimientos técnicos, mi capacidad de resolución de problemas y mi compromiso
+                            con la mejora continua, contribuyendo al desarrollo de soluciones tecnológicas innovadoras y
+                            escalables.
+                        </p>
+                    </div>
+
+                    <div class="about-skills">
+                        <h3 class="skills-title">Stack Tecnológico Principal</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fab fa-php"></i>
+                                <span>PHP</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-server"></i>
+                                <span>Linux</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- RESUMEN PROFESIONAL                          -->
+    <!-- ============================================ -->
+    <section class="section summary" id="summary">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">02. Resumen Profesional</span>
+                <h2 class="section-title">Perfil Ejecutivo</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Desarrollo de Software</h3>
+                    <p>
+                        Desarrollo de aplicaciones web completas utilizando PHP, MySQL, HTML5, CSS3 y JavaScript.
+                        Experiencia en arquitectura MVC, APIs RESTful y optimización de bases de datos.
+                        Enfoque en código limpio, escalable y bien documentado.
+                    </p>
+                    <ul class="summary-list">
+                        <li><i class="fas fa-check"></i> Desarrollo full-stack con PHP y MySQL</li>
+                        <li><i class="fas fa-check"></i> Diseño responsive y mobile-first</li>
+                        <li><i class="fas fa-check"></i> Integración de APIs de terceros</li>
+                        <li><i class="fas fa-check"></i> Optimización de rendimiento web</li>
+                    </ul>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Soporte Técnico & Infraestructura</h3>
+                    <p>
+                        Gestión integral de infraestructura tecnológica, mantenimiento preventivo y correctivo
+                        de equipos de cómputo. Diagnóstico avanzado de fallos hardware y software con
+                        metodologías estructuradas de resolución.
+                    </p>
+                    <ul class="summary-list">
+                        <li><i class="fas fa-check"></i> Mantenimiento de equipos y redes</li>
+                        <li><i class="fas fa-check"></i> Diagnóstico y reparación avanzada</li>
+                        <li><i class="fas fa-check"></i> Gestión de inventario tecnológico</li>
+                        <li><i class="fas fa-check"></i> Documentación técnica detallada</li>
+                    </ul>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Capacitación & Formación</h3>
+                    <p>
+                        Facilitador en programas de formación tecnológica. Diseño de material
+                        didáctico, evaluación de competencias y seguimiento post-capacitación. En ofimática avanzada y
+                        herramientas de diseño gráfico.
+                    </p>
+                    <ul class="summary-list">
+                        <li><i class="fas fa-check"></i> Capacitación en ofimática avanzada</li>
+                        <li><i class="fas fa-check"></i> Diseño gráfico y multimedia</li>
+                        <li><i class="fas fa-check"></i> 50+ estudiantes capacitados</li>
+                        <li><i class="fas fa-check"></i> 95% tasa de satisfacción</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="achievements">
+                <h3 class="achievements-title">Logros Cuantificables</h3>
+                <div class="achievements-grid">
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <span class="achievement-number">50%</span>
+                            <span class="achievement-label">Optimización de procesos operativos mediante automatización
+                                de tareas repetitivas y rediseño de flujos de trabajo</span>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <span class="achievement-number">40%</span>
+                            <span class="achievement-label">Reducción de fallos críticos en infraestructura tecnológica
+                                mediante mantenimiento preventivo programado</span>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <span class="achievement-number">120+</span>
+                            <span class="achievement-label">Profesionales capacitados en programas de formación
+                                tecnológica con evaluaciones superiores al 90%</span>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <span class="achievement-number">30%</span>
+                            <span class="achievement-label">Reducción en tiempos de respuesta de soporte técnico
+                                mediante implementación de sistema de tickets</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PROYECTOS - Sección extra solicitada         -->
+    <!-- ============================================ -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">03. Proyectos</span>
+                <h2 class="section-title">Trabajos Destacados</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <!-- Reemplaza con tu imagen: src="assets/images/project1.jpg" -->
+                        <img src="images/project-1.png" alt="Sistema de Gestión de Inventario" loading="lazy">
+             
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">PHP</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">FullCalendar</span>
+                        </div>
+                        <h3 class="project-title">Sistema de Gestión de Reservas</h3>
+                        <p class="project-description">
+                            Aplicación web completa para control de reservas con calendario de visualizacion, reportes
+                            automáticos, implementación de roles y permisos de usuario.
+                        </p>
+                        <div class="project-metrics">
+                            <span><i class="fas fa-chart-line"></i> 50% reducción en gastos de material de
+                                escritorio</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/project-2.png" alt="Dashboard Administrativo" loading="lazy">
+
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">SQL</span>
+                            <span class="project-tag">UML</span>
+                        </div>
+                        <h3 class="project-title">Diseño de base de datos</h3>
+                        <p class="project-description">
+                            Diseño de base de datos relacional para el Centro Deportivo Triple A, optimizado para la
+                            gestión de reservas en tiempo real y control de pagos. El esquema permite una trazabilidad
+                            completa de usuarios, canchas y deportes, garantizando integridad referencial y alta
+                            disponibilidad de datos. Estructura escalable diseñada para integrarse con páneles de
+                            control dinámicos y reportes automatizados en entornos multi-dispositivo.
+                        </p>
+                        <div class="project-metrics">
+                            <span><i class="fas fa-bolt"></i> Carga &lt; 2 segundos</span>
+                            <span><i class="fas fa-mobile-alt"></i> 100% responsive</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop"
+                            alt="Sistema de Tickets de Soporte" loading="lazy">
+                        
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                        </div>
+                        <h3 class="project-title">Sistema de Tickets de Soporte</h3>
+                        <p class="project-description">
+                            Plataforma de gestión de incidencias técnicas con asignación automática,
+                            seguimiento de estado, notificaciones por email y métricas de resolución.
+                            Redujo tiempos de respuesta en un 30%.
+                        </p>
+                        <div class="project-metrics">
+                            <span><i class="fas fa-clock"></i> 30% más rápido</span>
+                            <span><i class="fas fa-envelope"></i> Notificaciones automáticas</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 4 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/project-4.png"
+                            alt="Plataforma de Capacitación" loading="lazy">
+                        
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">PHP</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">CSS3</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <h3 class="project-title">Plataforma de Seminarios</h3>
+                        <p class="project-description">
+                            Sistema de e-learning con gestión de cursos, evaluaciones automatizadas,
+                            certificados digitales y seguimiento de progreso. Diseñado para formación
+                            corporativa en ofimática y diseño gráfico.
+                        </p>
+                        <div class="project-metrics">
+                            <span><i class="fas fa-graduation-cap"></i> 120+ estudiantes</span>
+                            <span><i class="fas fa-certificate"></i> Certificados automáticos</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CURRÍCULUM VITAE                             -->
+    <!-- ============================================ -->
+    <section class="section cv" id="cv">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">04. Currículum Vitae</span>
+                <h2 class="section-title">Trayectoria Profesional</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="cv-actions">
+                <a href="/docs/cv.pdf" class="btn btn-primary" download>
+                    <i class="fas fa-download"></i> Descargar CV en PDF
+                </a>
+            </div>
+
+            <div class="cv-grid">
+                <!-- Experiencia Laboral -->
+                <div class="cv-column">
+                    <h3 class="cv-column-title">
+                        <i class="fas fa-briefcase"></i> Experiencia Laboral
+                    </h3>
+
+                    <div class="timeline">
+
+                        <!-- CYS -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Abril 2025 – Febrero 2026</span>
+                                <h4 class="timeline-title">Facilitador de Capacitación</h4>
+                                <span class="timeline-company">Centro de Capacitación Técnica Privada CYS</span>
+                                <ul class="timeline-list">
+                                    <li>Capacitación a más de 50 estudiantes en Ofimática y Diseño Gráfico, mejorando
+                                        sus competencias digitales.</li>
+                                    <li>Elaboración de material didáctico y evaluaciones alineadas a objetivos
+                                        académicos.</li>
+                                    <li>Acompañamiento técnico y pedagógico en proyectos prácticos en aula.</li>
+                                    <li>Seguimiento académico continuo, asegurando el progreso y calidad del
+                                        aprendizaje.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Full Stack -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Enero 2022 – Enero 2023</span>
+                                <h4 class="timeline-title">Desarrollador Full Stack</h4>
+                                <span class="timeline-company">Facultad DCPS – UTO</span>
+                                <ul class="timeline-list">
+                                    <li>Desarrollo de sistema web de reservas, centralizando el 100% de solicitudes
+                                        administrativas.</li>
+                                    <li>Implementación de arquitectura MVC con PHP y MySQL, mejorando la escalabilidad
+                                        del sistema.</li>
+                                    <li>Desarrollo de interfaz con HTML, CSS, JavaScript, jQuery y FullCalendar.</li>
+                                    <li>Optimización del proceso de reservas, reduciendo tiempos de gestión en
+                                        aproximadamente 30%.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Pasantías -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Diciembre 2021 – Febrero 2022</span>
+                                <h4 class="timeline-title">Pasante en Soporte Técnico</h4>
+                                <span class="timeline-company">Facultad DCPS – UTO (URKE)</span>
+                                <ul class="timeline-list">
+                                    <li>Digitalización de más de 500 registros en Kardex, reduciendo en un 50% el tiempo
+                                        de búsqueda.</li>
+                                    <li>Mantenimiento preventivo y correctivo, disminuyendo fallos en un 40%.</li>
+                                    <li>Instalación y configuración de más de 50 equipos informáticos.</li>
+                                    <li>Mejora del rendimiento de equipos en entornos académicos.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Educación -->
+                <div class="cv-column">
+                    <h3 class="cv-column-title">
+                        <i class="fas fa-graduation-cap"></i> Formación Académica
+                    </h3>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2021 - Presente</span>
+                                <h4 class="timeline-title">Ingeniería de Sistemas</h4>
+                                <span class="timeline-company">Universidad Adventista de Bolivia UAB</span>
+                                <p class="timeline-text">
+                                    Formación integral en diseño, desarrollo y gestión de sistemas de información.
+                                    Énfasis en ingeniería de software, bases de datos y arquitectura de sistemas.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2019 - 2021</span>
+                                <h4 class="timeline-title">Técnico Superior en Sistemas informáticos</h4>
+                                <span class="timeline-company">Instituto Tecnico Jesús Maria</span>
+                                <p class="timeline-text">
+                                    Especialización en análisis, diseño e implementación de sistemas informáticos.
+                                    Proyecto final: Sistema de gestión con PHP y MySQL.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="cv-column-title" style="margin-top: 3rem;">
+                        <i class="fas fa-certificate"></i> Competencias Clave
+                    </h3>
+
+                    <div class="competencies">
+                        <div class="competency-item">
+                            <span class="competency-name">Desarrollo Web (PHP/MySQL/JS)</span>
+                            <div class="competency-bar">
+                                <div class="competency-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="competency-item">
+                            <span class="competency-name">Soporte Técnico & Hardware</span>
+                            <div class="competency-bar">
+                                <div class="competency-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="competency-item">
+                            <span class="competency-name">Capacitación & Formación</span>
+                            <div class="competency-bar">
+                                <div class="competency-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="competency-item">
+                            <span class="competency-name">Diseño Gráfico & Multimedia</span>
+                            <div class="competency-bar">
+                                <div class="competency-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="competency-item">
+                            <span class="competency-name">Gestión de Proyectos</span>
+                            <div class="competency-bar">
+                                <div class="competency-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                       -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>TN<span class="logo-bracket">/&gt;</span>
+                    </span>
+                    <p>Diseñado y desarrollado con <i class="fas fa-heart"></i> y mucho <i class="fas fa-coffee"></i>
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#hero">Inicio</a>
+                    <a href="#about">Sobre Mí</a>
+                    <a href="#projects">Proyectos</a>
+                    <a href="#cv">CV</a>
+                    <a href="#contact">Contacto</a>
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://github.com/edgarzdev" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/edgar-ramirez-lopez" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:contacto.ramirezedgar@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tu Nombre Completo. Todos los derechos reservados.</p>
+                <p class="footer-tech">Construido con HTML5, CSS3 y JavaScript puro</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón volver arriba -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
+
 </html>
